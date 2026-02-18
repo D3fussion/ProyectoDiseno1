@@ -8,18 +8,14 @@ export function getRecentSearches() {
 export function saveRecentSearch(term) {
     if (!term) return;
 
-    // Validate that it's not a coordinate string to avoid saving geolocation searches as text
     if (/^-?\d+(\.\d+)?,-?\d+(\.\d+)?$/.test(term)) return;
 
     let searches = getRecentSearches();
 
-    // Remove if already exists to move it to the top
     searches = searches.filter(s => s.toLowerCase() !== term.toLowerCase());
 
-    // Add to the beginning
     searches.unshift(term);
 
-    // Keep only the last MAX_RECENT_SEARCHES
     searches = searches.slice(0, MAX_RECENT_SEARCHES);
 
     localStorage.setItem(RECENT_SEARCHES_KEY, JSON.stringify(searches));
@@ -38,7 +34,6 @@ export function renderRecentSearches(container, callback) {
     container.classList.remove('opacity-0', 'invisible');
     container.classList.add('opacity-100', 'visible');
 
-    // Add header or separator if needed, but for now just the items
     const header = document.createElement("div");
     header.className = "px-4 py-2 text-xs font-bold text-gray-400 uppercase tracking-wider";
     header.textContent = "Búsquedas recientes";
@@ -54,11 +49,9 @@ export function renderRecentSearches(container, callback) {
         `;
 
         div.onclick = () => {
-            // Hide suggestions immediately
             container.classList.remove('opacity-100', 'visible');
             container.classList.add('opacity-0', 'invisible');
 
-            // Fill input with term
             const input = document.getElementById("inputBusqueda");
             if (input) input.value = term;
 
