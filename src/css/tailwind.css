@@ -51,6 +51,27 @@
     filter: blur(64px);
 }
 
+.toast-base {
+    @apply !text-gray-800 !font-medium !p-4 !rounded-2xl !shadow-convex !mb-4 !transition-all !duration-300 !ease-in-out;
+    @apply hover:shadow-convex-sm;
+}
+
+.toast-exito {
+    @apply !bg-green-200;
+}
+
+.toast-error {
+    @apply !bg-red-200;
+}
+
+.toast-advertencia {
+    @apply !bg-yellow-200;
+}
+
+.toast-default {
+    @apply !bg-my-gray;
+}
+
 /* Animaciones que hice Claude */
 
 @keyframes lightning {
