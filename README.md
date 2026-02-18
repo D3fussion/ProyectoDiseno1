@@ -1,4 +1,4 @@
-# Weather & Place Explorer
+# Meowl Forecast
 
 ## 1. Descripción General
 **Meowl Forecast** es una aplicación web diseñada como herramienta para consultar el clima actual y el pronóstico detallado de cualquier ciudad del mundo.
@@ -54,3 +54,7 @@ Para probar este proyecto en tu entorno local, necesitarás tener instalado **No
 
 ## 5. Capturas de Pantalla
 Aquí puedes ver algunas capturas de la aplicación en funcionamiento:
+<img width="3420" height="2619" alt="imagen" src="https://github.com/user-attachments/assets/2ab3bc82-cb36-4593-a460-354c6e5517d4" />
+<img width="3420" height="1784" alt="imagen" src="https://github.com/user-attachments/assets/0eb7b086-9236-4d8f-826e-b97cf5f8f4d7" />
+<img width="3420" height="1784" alt="imagen" src="https://github.com/user-attachments/assets/42dd910a-396b-463f-b640-8b5b86809577" />
+
